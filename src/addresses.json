@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Ethereum",
+    "RPC_Url": "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+    "Dexes": [
+      {
+        "name": "SushiSwap",
+        "address": "0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac"
+      }
+    ]
+  },
+  {
+    "name": "Binance",
+    "RPC_Url": "https://bsc-dataseed.binance.org/",
+    "Dexes": [
+      {
+        "name": "PancakeSwap",
+        "address": "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73"
+      },
+      {
+        "name": "ApeSwap",
+        "address": "0x0841BD0B734E4F5853f0dD8d7Ea041c241fb0Da6"
+      },
+      {
+        "name": "BiSwap",
+        "address": "0x858E3312ed3A876947EA49d572A7C42DE08af7EE"
+      }
+    ]
+  },
+  {
+    "name": "Polygon",
+    "RPC_Url": "https://polygon-rpc.com",
+    "Dexes": [
+      {
+        "name": "QuickSwap",
+        "address": "0x5757371414417b8C6CAad45bAeF941aBc7d3Ab32"
+      },
+      {
+        "name": "DFYN",
+        "address": "0xE7Fb3e833eFE5F9c441105EB65Ef8b261266423B"
+      }
+    ]
+  },
+  {
+    "name": "Avalanche",
+    "RPC_Url": "https://api.avax.network/ext/bc/C/rpc",
+    "Dexes": [
+      {
+        "name": "TraderJoe",
+        "address": "0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10"
+      },
+      {
+        "name": "Pangolin",
+        "address": "0xefa94DE7a4656D787667C749f7E1223D71E9FD88"
+      },
+      {
+        "name": "Lydia",
+        "address": "0xe0C1bb6DF4851feEEdc3E14Bd509FEAF428f7655"
+      }
+    ]
+  }
+]

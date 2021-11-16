@@ -2,16 +2,36 @@
 import Web3 from "web3";
 const ABI = require("./abi.json");
 const pairABI = require("./pairABI.json");
+const addresses = require("./addresses.json");
 // const tokenABI = require("./tokenABI.json");
-const web3 = new Web3(Web3.givenProvider);
+const Rpc_Url = "https://mainnet.infura.io/v3/121e387db5e842e69e3fd77abac14694";
+const web3Provider = new Web3.providers.HttpProvider(Rpc_Url);
+const web3 = new Web3(web3Provider);
 const axios = require("axios").default;
 var factoryContract = new web3.eth.Contract(
   ABI,
-  "0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac"
+  "0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac"
 );
+web3.eth.getBlockNumber().then((result) => {
+  console.log("Block Number : ", result);
+  for (let index = 0; index < addresses.length; index++) {
+    console.log("<<<<<<<<<<", addresses[index].name, ">>>>>>>>>>");
+    for (let index1 = 0; index1 < addresses[index].Dexes.length; index1++) {
+      console.log(
+        "Dex",
+        index1 + 1,
+        " : ",
+        addresses[index].Dexes[index1].name,
+        " : ",
+        addresses[index].Dexes[index1].address
+      );
+    }
+  }
+});
 var counter = 0;
 function App() {
   let blockNumber;
+
   const checkReserves = async (item) => {
     const latest = await web3.eth.getBlock("latest");
     let events, blockData, lastEvent;
@@ -67,8 +87,8 @@ function App() {
     console.log("Latest Block", latest.number);
     console.log("Interval", interval);
     console.log("Deployment BlockNumber", blockNumber);
-    var start = parseInt(blockNumber);
-    var end = start + interval;
+    var start = parseInt(latest.number - 50000);
+    var end = parseInt(latest.number);
     for (; end <= latest.number; end = end + interval) {
       await getPastEvents(start, end);
       start = end;
