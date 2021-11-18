@@ -11,7 +11,7 @@
   },
   {
     "name": "Binance",
-    "RPC_Url": "https://bsc-dataseed.binance.org/",
+    "RPC_Url": "https://bsc-dataseed1.binance.org",
     "Dexes": [
       {
         "name": "PancakeSwap",
@@ -29,7 +29,7 @@
   },
   {
     "name": "Polygon",
-    "RPC_Url": "https://polygon-rpc.com",
+    "RPC_Url": "https://rpc-mainnet.maticvigil.com",
     "Dexes": [
       {
         "name": "QuickSwap",
